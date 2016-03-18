@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>定位居中问题</title>
+  <style>
+	.main
+	{
+	width:400px;
+	height:200px;
+	background-color:#ccc;
+	position:relative;
+	margin:0 auto;
+	vertical-align:middle;
+	overflow:hidden;
+	}
+	.small
+	{
+	background:#fc0;
+	width:100px;
+	height:100px;
+	}
+	.left
+	{
+	position:absolute;
+	top:-50px;
+	left:-50px;
+	border-radius:50%;
+	}
+	.right
+	{
+	position:absolute;
+	bottom:-50px;
+	right:-50px;
+	border-radius:50%;
+	}
+  </style>
+ </head>
+ <body>
+ 
+  <div class="main">
+	<div class="left small"></div>
+	<div class="right small"></div>
+  </div>
+  <script>
+
+setMiddle();
+window.onresize=function(){
+	setMiddle();
+}
+function setMiddle(){
+	var main=document.getElementsByClassName("main")[0];
+	var mainH=main.offsetHeight;
+	var windowH=window.innerHeight;
+	main.style.top=windowH/2-mainH/2+"px";
+	//alert(windowH/2-mainH/2+"px");
+}
+  </script>
+ </body>
+</html>
