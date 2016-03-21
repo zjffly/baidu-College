@@ -7,7 +7,8 @@
   }
   .navbar
   {
-  height:55px;
+   min-width: 1349px;
+   height:55px;
    padding:10px;
   }
   .logo
@@ -82,6 +83,7 @@
 	}
 	.main
 	{
+	min-width:1260px;
 	width:95%;
 	margin:0 auto;
 	    margin-top: -12px;
@@ -117,6 +119,7 @@
 	font-size:58px;
 	font-weight:700;
 	margin:20px 0px;
+	letter-spacing:1px;
 	}
 	.banner-inner p
 	{
